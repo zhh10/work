@@ -1,0 +1,54 @@
+.showSeting-section{
+  margin:0 auto;
+  padding-top:70px;
+  width: 80%;
+  min-width: 1200px;
+  position: relative;
+
+  .showSeting-title{
+    text-align:center;
+    font-size:36px;
+    line-height: 36px;
+    color:#161616;
+    font-weight:normal;
+    margin:60px 0;
+    position: relative;
+    span{
+      width: 40px;
+      height: 3px;
+      display: block;
+      background: #161616;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -20px;
+      top:50px;
+    }
+  }
+  
+  .showSeting-content{
+    position: relative;
+    cursor: pointer;
+    img{
+      width: 100%;
+    }
+
+    @at-root #{&}--title{
+      position: absolute;
+      top:10%;
+      right:5%;
+      color:#fff;
+      font-weight:700;
+      font-size:30px;
+    }
+
+    @at-root #{&}--desc{
+        color: #fff;
+        font-size:25px;
+        width: 40%;
+        position: absolute;
+        bottom:10%;
+        left:5%;
+    }
+  }
+}

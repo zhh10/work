@@ -1,0 +1,94 @@
+.envBuild-section{
+  width:80%;
+  margin:0 auto;
+  padding-top:70px;
+  min-width: 1200px;
+  position: relative;
+
+  .envBuild-title{
+    text-align:center;
+    font-size:36px;
+    line-height: 36px;
+    color:#161616;
+    font-weight:normal;
+    margin:60px 0;
+    position: relative;
+    span{
+      width: 40px;
+      height: 3px;
+      display: block;
+      background: #161616;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -20px;
+      top:50px;
+    }
+  }
+
+
+  .envBuild-content{
+    .swiper-container{
+      width:100%;
+    }
+    .swiper-slide{
+      @at-root #{&}--item{
+        position: relative;
+      }
+      @at-root #{&}--text{
+        position: absolute;
+        top:0;
+        z-index:2;
+        padding:28px 32px;
+        color:#fff;
+      }
+      @at-root #{&}--title{
+        font-size:36px;
+        line-height:36px;
+        font-weight: normal;
+        padding-bottom:30px;
+      }
+
+      @at-root #{&}--desc{
+        width:450px;
+        font-size:20px;
+        line-height:30px;
+        padding-bottom:30px;
+      }
+
+      @at-root #{&}--btn{
+        outline: none;
+        border-radius: 20px;
+        padding:5px;
+        width:100px;
+        color:#fff;
+        border: 1px solid #fff;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+    img{
+      width:100%;
+    }
+  }
+  .swiper-pagination-custom{
+    position: relative;
+    top:10px;
+  }
+  .swiper-pageGroup{
+    display: flex;
+    justify-content: center;
+    .swiper-page{
+      cursor: pointer;
+      width:10%;
+      height:20px;
+      background-color:#808695;
+      list-style: none;
+      margin:10px;
+      transition: width .5s;
+    }
+    .swiper-pagination-customs-active{
+      width: 15%;
+    }
+  }
+}

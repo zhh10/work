@@ -1,0 +1,55 @@
+.classicUser-section{
+  width:80%;
+  margin:0 auto;
+  padding-top:70px;
+  min-width: 1200px;
+  position: relative;
+
+  .classicUser-title{
+    text-align:center;
+    font-size:36px;
+    line-height: 36px;
+    color:#161616;
+    font-weight:normal;
+    margin:60px 0;
+    position: relative;
+
+    span{
+      width: 40px;
+      height: 3px;
+      display: block;
+      background: #161616;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -20px;
+      top:50px;
+    }
+  }
+
+  .classicUser-content{
+    margin-top:40px;
+    .classicUser-item{
+      width:48%;
+      overflow:hidden;
+      flex:0 0 auto;
+
+      @at-root #{&}--table{
+        height:480px;
+        overflow-y: auto;
+      }
+      @at-root #{&}--title{
+        font-size: 20px;
+        margin-bottom:20px;
+        font-weight: normal;
+        text-align: center;
+      }
+    }
+
+    .ivu-table-header thead tr th{
+      background-color: #5cadff;
+      color:#fff;
+      font-weight: normal;
+    }
+  }
+}
