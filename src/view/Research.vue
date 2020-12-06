@@ -5,12 +5,12 @@
             <div class="Research-top--title">主要研究成果</div>
         </div>
         <div class="Research-content">
-            <Card class="Research-left">
+            <div class="Research-left Research-card">
                 <ul>
                   <li @click="handleClick(item.name)" :class="['Research-left--item',activeResearch.name === item.name ? 'active' : '']" v-for="(item,index) in researchData" :key="index">{{item.name}}</li>
                 </ul>
-            </Card>
-            <Card class="Research-right"></Card>
+            </div>
+            <div class="Research-right Research-card"></div>
         </div>
     </div>
 </template>

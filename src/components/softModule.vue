@@ -20,7 +20,7 @@
           </Row>
           <div class="softModule-button">
                 <div class="softModule-button--more" @click="handleMore()">查看更多</div>
-            </div>
+          </div>
       </div>
     </section>  
 </template>
@@ -33,7 +33,32 @@ export default {
         softList:[
           {
             icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
+            name:'协同设计任务与信息综合管理',
+            desc:'产品全寿命周期质量管理',
+          },
+          {
+            icon:require('@/assets/images/ind04.png'),
+            name:'形式化质量特性综合建模',
+            desc:'产品全寿命周期质量管理',
+          },
+          {
+            icon:require('@/assets/images/ind04.png'),
+            name:'基于模型的FMECA',
+            desc:'产品全寿命周期质量管理',
+          },
+          {
+            icon:require('@/assets/images/ind04.png'),
+            name:'基于模型的FTA',
+            desc:'产品全寿命周期质量管理',
+          },
+          {
+            icon:require('@/assets/images/ind04.png'),
+            name:'基于模型的预测性分析',
+            desc:'产品全寿命周期质量管理',
+          },
+          {
+            icon:require('@/assets/images/ind04.png'),
+            name:'结构可靠性分析',
             desc:'产品全寿命周期质量管理',
           },
           {
@@ -43,37 +68,27 @@ export default {
           },
           {
             icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
+            name:'质量特性知识图谱管理',
             desc:'产品全寿命周期质量管理',
           },
           {
             icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
+            name:'基于故障物理的可靠性仿真',
             desc:'产品全寿命周期质量管理',
           },
           {
             icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
+            name:'系统故障预测',
             desc:'产品全寿命周期质量管理',
           },
           {
             icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
+            name:'设计协同系统',
             desc:'产品全寿命周期质量管理',
           },
           {
             icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
-            desc:'产品全寿命周期质量管理',
-          },
-          {
-            icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
-            desc:'产品全寿命周期质量管理',
-          },
-          {
-            icon:require('@/assets/images/ind04.png'),
-            name:'可靠性预计',
+            name:'系统特性要求仿真权衡分析',
             desc:'产品全寿命周期质量管理',
           },
         ]
@@ -87,7 +102,8 @@ export default {
       this.activeIndex = null
     },
     handleMore(){
-      this.$router.push(`/software`)
+      const name = '可靠性预计'
+      this.$router.push(`/software/${name}`)
     }
   }
 }

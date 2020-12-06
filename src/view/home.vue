@@ -16,7 +16,6 @@
                 <li v-for="(item,index) in hashBox" :key="index"
                 :class="['hash-box--item',item.active ? 'active' : '']"
                 @click="hashItemClick(index)">
-                    <!-- <a :href = "`#${item.hashId}`"><span>{{item.name}}</span></a> -->
                     <span @click = "ScrollTo(item.hashId)">{{item.name}}</span>
                     
                 </li>
@@ -59,7 +58,6 @@ export default {
                 {name:'展厅中心',hashId:'showSeting',active:false},
                 {name:'典型用户',hashId:'classicUser',active:false},
             ],
-            lock:true
         }
     },
     methods:{
@@ -74,28 +72,24 @@ export default {
             dom.classList = top >= 400 ? 'hash-section fixed' : 'hash-section';
         },
         ScrollTo(id){
-            
             let dom = document.getElementById(id)
             let top = dom.offsetTop
-            if(this.lock){
-                top -= 70
-            }
             if(top >= 470){
                 document.getElementsByClassName('hash-section')[0].classList = 'hash-section fixed'
             }
-            setTimeout(() => {
-                let dom = document.getElementsByClassName('hash-section')[0]
-                if(this.activeIndex > 1)
-                this.lock = false;
-                window.scrollTo({ 
+            this.$nextTick(() => {
+                let dom = document.getElementById(id)
+                let top = dom.offsetTop
+                window.scrollTo({
                     top,
-                    behavior: "smooth" 
-                    });
-            },0)
+                    behavior:'smooth'
+                })
+            })
+            
         }
     },
     mounted(){
-        // this.handleScroll()
+        this.handleScroll()
         document.addEventListener('scroll',this.handleScroll)
     },
     destroyed(){

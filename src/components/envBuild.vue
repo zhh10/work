@@ -13,7 +13,7 @@
                             <div class="swiper-slide--text">
                                 <div class="swiper-slide--title">{{item.title}}</div>
                                 <div class="swiper-slide--desc">{{item.desc}}</div>
-                                <button class="swiper-slide--btn">了解更多+</button>
+                                <button class="swiper-slide--btn" @click="handleClick">了解更多+</button>
                             </div>
                         </div>
                     </div>
@@ -82,6 +82,10 @@ export default {
         SwiperInit(){
             const self = this 
             this.BannerSwiper = new Swiper('.swiper-container',self.SwiperOption)
+        },
+        handleClick(){
+            const name = '工业产品虚拟维修'
+            this.$router.push(`/envBuild/${name}`)
         }
     },
     mounted(){

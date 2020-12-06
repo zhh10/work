@@ -24,6 +24,10 @@ const routes = [
     path:'/showCenter',
     name:'showCenter',
     component: resolve => (require(['@/view/showCenter'],resolve))
+  },{
+    path:'/envBuild/:id',
+    name:'envBuild',
+    component: resolve => (require(['@/view/envPage'],resolve))
   }
 ]
 
